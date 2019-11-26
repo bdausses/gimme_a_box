@@ -23,6 +23,14 @@ if [ $? -ne 0 ]
     exit 1
 fi
 
+# Check for timeout
+which timeout >/dev/null 2>&1
+if [ $? -ne 0 ]
+  then
+    echo "ERROR:  It appears that timeout (coreutils) is not installed on this system.  Please install it and re-run this program."
+    exit 1
+fi
+
 # Set variables
 TIMESTAMP=`date '+%Y%m%d.%H%M%S'`
 SELF_DESTRUCT_TIME="117 min"
