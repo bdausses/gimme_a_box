@@ -12,7 +12,8 @@ If you've found this tool, you likely already have the prereqs, but for document
 
 - `jq` - [https://stedolan.github.io/jq/](https://stedolan.github.io/jq/)
 - `awscli` - [https://aws.amazon.com/cli/](https://aws.amazon.com/cli/)
-- Mac users with homebrew installed can get both with `brew install jq awscli`.
+- `timeout` - included in GNU coreutils: [https://github.com/coreutils/coreutils/](https://github.com/coreutils/coreutils/)
+- Mac users with homebrew installed can get all 3 with `brew install jq awscli coreutils`.
 
 You also need Remote Desktop if you're going to RDP to a Windows instance:
 - Remote Desktop - https://apps.apple.com/us/app/microsoft-remote-desktop-10/id1295203466?mt=12
