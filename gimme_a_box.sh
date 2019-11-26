@@ -29,12 +29,13 @@ SELF_DESTRUCT_TIME="117 min"
 INSTANCE_TYPE="t3.medium"
 AMI_SEARCH_TERM="chef-highperf*"
 AMI_USER="centos"
+KEY_NAME="aws_key_pair_name"
 
 # Set tag variables
 X_APPLICATION="NA-Central"
 # NOTE: X-Contact must be an email address.  This is required per Chef tagging standards and will
 # be expected below when generating the X-Name tag.
-X_CONTACT="bdausses@chef.io"
+X_CONTACT="user@chef.io"
 X_CUSTOMER="Testing"
 X_DEPT="Sales"
 X_PRODUCTION="No"
@@ -56,7 +57,7 @@ INSTANCE_ID=`aws ec2 run-instances \
   --count 1 \
   --instance-initiated-shutdown-behavior terminate \
   --instance-type ${INSTANCE_TYPE} \
-  --key-name bdausses_sa \
+  --key-name ${KEY_NAME} \
   --user-data "#!/bin/bash
                yum install -y at
                service atd start
